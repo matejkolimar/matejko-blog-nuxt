@@ -3,16 +3,19 @@
         <section class="post-list">
             <PostPreview
                 id="1"
+                :is-admin="isAdmin"
                 thumbnail="https://www.wpbeginner.com/wp-content/uploads/2020/04/featuredimageswp-og.png"
                 title="Hello there!"
                 preview-text="This is my first post!" />
             <PostPreview
                 id="1"
+                :is-admin="isAdmin"
                 thumbnail="https://www.wpbeginner.com/wp-content/uploads/2020/04/featuredimageswp-og.png"
                 title="Hello there!"
                 preview-text="This is my second post!" />
             <PostPreview
                 id="1"
+                :is-admin="isAdmin"
                 thumbnail="https://www.wpbeginner.com/wp-content/uploads/2020/04/featuredimageswp-og.png"
                 title="Hello there!"
                 preview-text="This is my third post!" />
@@ -25,6 +28,12 @@ import PostPreview from '@/components/Posts/PostPreview.vue'
 export default {
     components: {
         PostPreview,
+    },
+    props: {
+        isAdmin: {
+            type: Boolean,
+            default: false,
+        },
     },
 }
 </script>
